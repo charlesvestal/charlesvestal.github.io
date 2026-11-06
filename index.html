@@ -3,43 +3,117 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Charles Vestal: firmware for the FM-1</title>
+<title>Charles Vestal</title>
+<meta name="description" content="Firmware for the M-VAVE FM-1, Schwung for the Ableton Move, and music apps by Charles Vestal.">
 <style>
-:root { --ground: #faf4e8; --ink: #48392f; --muted: #6e5d4c; --accent: #b54a1f; color-scheme: light; }
-@media (prefers-color-scheme: dark) { :root { --ground: #1c1814; --ink: #f2e8d8; --muted: #b3a28e; --accent: #f28a5a; color-scheme: dark; } }
-body { background: var(--ground); color: var(--ink); margin: 0; padding: 48px 16px; font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; }
-main { max-width: 34rem; margin: 0 auto; }
+:root { --ground: #faf4e8; --card: #fffaf1; --line: #eadfcb; --ink: #48392f; --muted: #6e5d4c; --accent: #b54a1f; --teal: #1f6f6a; color-scheme: light; }
+@media (prefers-color-scheme: dark) { :root { --ground: #1c1814; --card: #241f1a; --line: #3a3128; --ink: #f2e8d8; --muted: #b3a28e; --accent: #f28a5a; --teal: #6cc4bc; color-scheme: dark; } }
+* { box-sizing: border-box; }
+body { background: var(--ground); color: var(--ink); margin: 0; padding: 40px 16px 56px; font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; }
+main { max-width: 42rem; margin: 0 auto; }
 a { color: var(--accent); }
-li { margin: 0 0 .6rem; }
-span { color: var(--muted); }
+h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 .25rem; }
+h2 { font-size: 1.45rem; margin: 3rem 0 .25rem; padding-top: 1rem; border-top: 2px solid var(--line); }
+h3 { font-size: .85rem; letter-spacing: .08em; text-transform: uppercase; color: var(--teal); margin: 1.75rem 0 .5rem; }
+p { margin: .25rem 0 1rem; }
+.lede, .muted { color: var(--muted); }
+nav ul { list-style: none; padding: 0; margin: 1rem 0 0; display: flex; flex-wrap: wrap; gap: .5rem; }
+nav a { display: inline-block; padding: .3rem .85rem; border: 1px solid var(--line); border-radius: 999px; background: var(--card); text-decoration: none; }
+ul.list { list-style: none; padding: 0; margin: 0; }
+ul.list li { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: .65rem .9rem; margin: 0 0 .5rem; }
+ul.list a { font-weight: 600; }
+ul.list span { display: block; color: var(--muted); font-size: .95rem; }
+.tag { font-size: .8rem; color: var(--muted); font-weight: normal; }
+footer { margin-top: 3rem; color: var(--muted); font-size: .95rem; }
 </style>
 </head>
 <body>
 <main>
-<h1>Firmware for the M-VAVE FM-1</h1>
+<header>
+<h1>Charles Vestal</h1>
+<p class="lede">Firmware for the M-VAVE FM-1, open modules for the Ableton Move, and small music apps.</p>
+<nav aria-label="Sections">
 <ul>
+  <li><a href="#fm1">FM-1 firmware</a></li>
+  <li><a href="#schwung">Schwung</a></li>
+  <li><a href="#apps">Apps</a></li>
+</ul>
+</nav>
+</header>
+
+<section id="fm1" aria-labelledby="fm1-title">
+<h2 id="fm1-title">Firmware for the M-VAVE FM-1</h2>
+<p class="muted">Each one installs from its page in the browser, and you can go back to M-VAVE's firmware from there too.</p>
+
+<h3>Grooveboxes</h3>
+<ul class="list">
+  <li><a href="fm1-x0x/">X0X</a> <span>909, 808, two 303s and a breakbeat player, with song mode and motion</span></li>
+  <li><a href="fm1-loom/">LOOM-8</a> <span>inspired by the OP-XY: eight tracks on fifteen engines, step tricks and locks, weave, a conductor and throws</span></li>
+  <li><a href="fm1-polly/">Polly</a> <span>a pocket arranger inspired by the Yamaha QY70: a band of eight follows the chords you play</span></li>
+</ul>
+
+<h3>Instruments</h3>
+<ul class="list">
   <li><a href="fm1-fomni/">FoMni-1</a> <span>a chord harp: strum the white keys, pick chords on the black ones</span></li>
-  <li><a href="fm1-x0x/">X0X</a> <span>a groovebox: 909, 808, two 303s and a breakbeat player</span></li>
-  <li><a href="fm1-loom/">LOOM-8</a> <span>a groovebox inspired by the OP-XY: eight tracks on fifteen engines, step tricks and locks, weave, a conductor and throws</span></li>
-  <li><a href="fm1-amb/">AMB-1</a> <span>a generative ambient machine, inspired by <i>Music for Airports</i></span></li>
-  <li><a href="fm1-ctl/">CTL-1</a> <span>a MIDI controller: notes in any scale, four banks of knobs, an arpeggiator and Euclidean drums, with General MIDI sounds of its own</span></li>
-  <li><a href="fm1-polly/">Polly</a> <span>a pocket arranger, inspired by the Yamaha QY70: a band of eight follows the chords you play</span></li>
   <li><a href="fm1-monk/">MONK-1</a> <span>twelve singers, played with velocity and pressure from the FM-1's own keys</span></li>
-  <li><a href="fm1-boardwalk/">Boardwalk</a> <span>a seaside arcade of music games: seventeen cabinets, from change ringing to a roller coaster whose track is the melody, with tickets and a prize counter</span></li>
+  <li><a href="fm1-amb/">AMB-1</a> <span>a generative ambient machine, inspired by <i>Music for Airports</i></span></li>
   <li><a href="fm1-ocarina/">OCA-1</a> <span>an ocarina for games that listen: the twelve songs of the Switch 2 <i>Ocarina of Time</i>, played to the console's microphone</span></li>
-  <li><a href="fm1-ripple/">Ripple</a> <span>an FM-1 you reprogram without reflashing: instruments in Lua that play sounds in Faust or C, added over a USB drive; twelve built in</span></li>
-  <li><a href="fm1-mocky/">Mocky</a> <span>pictures on the FM-1's screen, sent from the browser: for checking screen mockups on the real hardware</span></li>
 </ul>
-<h2>Tools</h2>
-<ul>
-  <li><a href="fm1-reader/">FM-1 Screen Reader</a> <span>hear what the FM-1's screen says, with your own screen reader or the page's voice, in firmwares with screen reader support</span></li>
+
+<h3>Controllers</h3>
+<ul class="list">
+  <li><a href="fm1-ctl/">CTL-1</a> <span>a MIDI controller: notes in any scale, four banks of knobs, an arpeggiator and Euclidean drums, with General MIDI sounds of its own</span></li>
 </ul>
-<h2>Source only</h2>
-<ul>
+
+<h3>Games</h3>
+<ul class="list">
+  <li><a href="fm1-boardwalk/">Boardwalk</a> <span>a seaside arcade of music games: seventeen cabinets, from change ringing to a roller coaster whose track is the melody, with tickets and a prize counter</span></li>
+</ul>
+
+<h3>Make your own</h3>
+<ul class="list">
+  <li><a href="fm1-ripple/">Ripple</a> <span>an FM-1 you reprogram without reflashing: instruments in Lua that play sounds in Faust or C, added over a USB drive</span></li>
+  <li><a href="fm1-base/">fm1-base</a> <span>the open base and template for writing FM-1 firmware in C, with a simulator, a browser emulator, Bluetooth MIDI and USB audio</span></li>
+  <li><a href="fm1-mocky/">Mocky</a> <span>pictures on the FM-1's screen, sent from the browser, for checking screen mockups on the real hardware</span></li>
+</ul>
+
+<h3>Tools</h3>
+<ul class="list">
+  <li><a href="fm1-reader/">FM-1 Screen Reader</a> <span>hear what the FM-1's screen says, with your own screen reader or the page's voice</span></li>
+</ul>
+
+<h3>Source only</h3>
+<ul class="list">
   <li><a href="https://github.com/charlesvestal/fm1-velocity">Velo</a> <span>velocity and aftertouch from the FM-1's keys, with no hardware changes</span></li>
   <li><a href="https://github.com/charlesvestal/fm1-radio">Radio</a> <span>internet radio over WiFi: every place on Radio Garden, with punch-in effects</span></li>
 </ul>
-<p><span>Source on <a href="https://github.com/charlesvestal">GitHub</a>.</span></p>
+</section>
+
+<section id="schwung" aria-labelledby="schwung-title">
+<h2 id="schwung-title">Schwung for the Ableton Move</h2>
+<p class="muted">An open framework for adding synths, effects and tools to the Move.</p>
+<ul class="list">
+  <li><a href="https://schwung.dev/">schwung.dev</a> <span>browse the modules: synths, effects, MIDI tools and standalone instruments</span></li>
+  <li><a href="https://github.com/charlesvestal/schwung">Schwung on GitHub</a> <span>the framework itself, with the docs for writing a module</span></li>
+  <li><a href="https://github.com/charlesvestal/schwung-installer">Schwung Installer</a> <span>install Schwung and its modules on your Move from Mac, Windows or Linux</span></li>
+</ul>
+</section>
+
+<section id="apps" aria-labelledby="apps-title">
+<h2 id="apps-title">Apps</h2>
+<p class="muted">Small, characterful music apps. For all of them, see <a href="https://charles.pizza/apps/">charles.pizza/apps</a>.</p>
+<ul class="list">
+  <li><a href="https://charles.pizza/apps/nusaw/">NuSaw</a> <span class="tag">iOS · Mac</span> <span>a polyphonic supersaw synth: up to 25 detuned saws, filter, envelopes, chorus and delay</span></li>
+  <li><a href="https://charles.pizza/apps/qwertet/">QWERTET</a> <span class="tag">iOS · AUv3</span> <span>a computer-keyboard MIDI controller with four layouts, one-key chords and an arpeggiator</span></li>
+  <li><a href="https://charles.pizza/apps/ambiotica/">Ambiotica</a> <span class="tag">iOS · Mac · Windows · Linux</span> <span>a generative ambient processor: a rolling looper, a granular cloud, micro-loops and reverb</span></li>
+  <li><a href="https://charles.pizza/apps/tapescam/">TAPESCAM</a> <span class="tag">iOS · Mac · Windows · Linux</span> <span>lo-fi drive, tape wobble and dropouts, inspired by the four-track</span></li>
+  <li><a href="https://charles.pizza/apps/punchline/">Punchline</a> <span class="tag">iOS · AUv3</span> <span>a playful drum machine with automation, punch-in effects and a sequenced gate</span></li>
+</ul>
+</section>
+
+<footer>
+<p>Source on <a href="https://github.com/charlesvestal">GitHub</a>. More at <a href="https://charles.pizza/">charles.pizza</a>.</p>
+</footer>
 </main>
 </body>
 </html>
